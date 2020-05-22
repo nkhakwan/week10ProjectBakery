@@ -1,0 +1,28 @@
+@using Bakery.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<h1>Vendor's List with Description </h1>
+
+@if (Model.Count == 0)
+{
+<p>Pierree No Vendors so far. Is LockDown affecting you?</p>
+}
+@foreach (Vendor vendor in Model)//list<Items>{{}}
+{
+<p><a href='/vendors/@vendor.Id'>@vendor.Name @vendor.Description</a></p>
+}
+<button class="btn btn-light"><a href='/vendors/new'>Add a new Vendor</a></button>
+
+
+
+
+
+@*
+<br>
+<br>
+<form action="/places/delete" method="post">
+  <button type="submit" name="button" class="btn">Clear All Items</button>
+</form*@
