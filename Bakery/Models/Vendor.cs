@@ -32,6 +32,7 @@ namespace Bakery.Models
 
     public static Vendor Find(int searchId)
     {
+      Console.WriteLine("I am in vendor find");
       return _instances[searchId-1];
     }
     public void AddItem(Order MyOrder)
