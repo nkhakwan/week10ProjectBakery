@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Bakery.Models;
 using System.Collections.Generic;
+using System;
 
 namespace Bakery.Controllers
 {
-  public class OrderController : Controller
+  public class VendorController : Controller
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
@@ -33,9 +34,10 @@ namespace Bakery.Controllers
       return View();
     }
 
-    [HttpGet("/vendor/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
+      Console.WriteLine("I am in vendors.Id");
       Order foundOrder = Order.Find(id);
       return View(foundOrder);
     }
