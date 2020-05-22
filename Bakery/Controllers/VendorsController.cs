@@ -33,11 +33,17 @@ namespace Bakery.Controllers
       return View();
     }
 
-    [HttpGet("/Order/{id}")]
+    [HttpGet("/vendor/{id}")]
     public ActionResult Show(int id)
     {
       Order foundOrder = Order.Find(id);
       return View(foundOrder);
+    }
+
+    [HttpGet("/order/new")]
+    public ActionResult OrderNew()
+    {
+      return View();
     }
 
   }
