@@ -19,10 +19,10 @@ namespace Bakery.Controllers
       return View();
     }
 
-    [HttpPost("/orders")]
-    public ActionResult Create(string description)
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string vendorDescription)
     {
-      Order myOrder = new Order(description);
+      Vendor myVendor = new Vendor(vendorName, vendorDescription);
       return RedirectToAction("Index");
     }
 
