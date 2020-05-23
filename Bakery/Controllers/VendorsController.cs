@@ -34,13 +34,7 @@ namespace Bakery.Controllers
       return View();
     }
 
-    // [HttpGet("/vendors/{id}")]
-    // public ActionResult Show(int id)
-    // {
-    //   Console.WriteLine("I am in vendors.Id");
-    //   Order foundOrder = Order.Find(id);
-    //   return View(foundOrder);
-    // }
+    
 
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
@@ -54,6 +48,27 @@ namespace Bakery.Controllers
       return View(model);
     }
 
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult OrderNew(int vendorId)
+    {
+       Vendor vendor = Vendor.Find(vendorId);
+       return View(vendor);
+    }
+
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string title, string description, int price, string date)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(title, description, price,  date);
+      foundVendor.AddItem(newOrder);
+      List<Order> categoryItems = foundVendor.Orders;
+      model.Add("order", categoryItems);
+      model.Add("vendor", foundVendor);
+      return View("Show", model);
+    }
+
+
     [HttpGet("/vendor/{vendorId}/orders/{orderId}")]
     public ActionResult OrderShow(int vendorId, int orderId)
     {
@@ -64,6 +79,14 @@ namespace Bakery.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
+
+
+
+
+
+
+
+
 
 
     [HttpGet("/order/new")]
