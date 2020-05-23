@@ -12,7 +12,9 @@
 }
 @foreach (Vendor vendor in Model)//list<Items>{{}}
 {
-<p><a href='/vendors/@vendor.Id'>@vendor.Name @vendor.Description</a></p>
+@* <p><a href='/vendors/@vendor.Id'>@vendor.Name @vendor.Description</a></p> *@
+<p><a href='/vendors/@vendor.Id'>Name: @vendor.Name Description: @vendor.Description </a></p>
+<br>
 }
 <button class="btn btn-light"><a href='/vendors/new'>Add a new Vendor</a></button>
 
