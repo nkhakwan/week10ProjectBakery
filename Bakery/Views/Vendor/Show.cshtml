@@ -4,14 +4,14 @@
   Layout = "_Layout";
 }
 
-<h3>Here are all the Orders for this Vendor:</h3>
+<h1>Here are all the Orders for this Vendor:</h1>
 
-<ol>
+@* <ol> *@ Keeping commented out lines for future reference
 @foreach (Order order in @Model["order"])
 {
-  <li>Title: @order.Title, Description: @order.Description,  Price: @order.Price, Date: @order.Date</li>
+  <h4>Title: @order.Title, Description: @order.Description,  Price: @order.Price, Date: @order.Date</h4>
 }
-</ol>
+@* </ol> *@
 
 <button class="btn btn-light"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></button>
 <br>
