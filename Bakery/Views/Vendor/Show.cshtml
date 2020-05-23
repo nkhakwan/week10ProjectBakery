@@ -6,7 +6,7 @@
 
 <h1>Here are all the Orders for this Vendor:</h1>
 
-@* <ol> *@ Keeping commented out lines for future reference
+@* <ol>  Keeping commented out lines for future reference*@
 @foreach (Order order in @Model["order"])
 {
   <h4>Title: @order.Title, Description: @order.Description,  Price: @order.Price, Date: @order.Date</h4>
@@ -14,7 +14,9 @@
 @* </ol> *@
 
 <button class="btn btn-light"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></button>
-<br>
+@* <br> *@
+@* <button class="btn btn-light"><a href='/orders/delete'>Delete all orders</a></button> *@
+<br> 
 <button class="btn btn-light"><a href='/vendors'>Return to vendors list</a></button>
 <br>
 <button class="btn btn-light"><a href='/'>Return to Main Page</a></button>

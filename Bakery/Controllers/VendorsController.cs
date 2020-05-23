@@ -31,7 +31,7 @@ namespace Bakery.Controllers
     public ActionResult DeleteAll()
     {
       Order.ClearAll();
-      return View();
+      return RedirectToAction("Show");
     }
 
     
@@ -66,8 +66,6 @@ namespace Bakery.Controllers
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
-
-
     
 
     [HttpGet("/order/new")]
