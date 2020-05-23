@@ -6,7 +6,7 @@
 
 ## Description
 
-_This Project is Pierre's Bakery Website where a Vendor can register himsel, See his previous orders and place new orders_
+_This Project is Pierre's Bakery Website where the web owner Pierre can register vendors, See all previous orders of any vendor and place new orders for any vendor_
 
 ## Setup/Installation Requirements
 
@@ -17,7 +17,7 @@ _This Project is Pierre's Bakery Website where a Vendor can register himsel, See
 
 ## Known Bugs
 
-WIP.
+None. All the basic requirements of Project are fulfilled
  
 ## Support and contact details
 
@@ -35,11 +35,10 @@ _Have a bug or an issue with this application? Email post_khan@yahoo.com_
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **WIP** | User Input:"” | Output: "" |
-| **WIP** | User Input:”” | Output: "" |
-| **WIP** | User Input:”” | Output: "" |
-| **WIP** | User Input:”” | Output: "" |
-| **WIP** | User Input:”” | Output: "" |
+| **Owner can add vendors by clicking see vendors** | User Input:"add Name and Description” | Output: "Name Descropton displayed" |
+| **Owner can view orders of a vendor** | User Input:”click on the name and descripton line of vendor” | Output: "All order of that vendors displayed" |
+| **Owner can add orders** | User Input:”click add order and fill in the form with titel,description,price and date” | Output: "All of the info of orders displayed on the page" |
+| **Owner can Navigate site** | User Input:”Owner can click the options available” | Output: "It'll take the owner to which ever site he wanted to navigate to" |
 
 ### License
 
